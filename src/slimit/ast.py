@@ -112,7 +112,7 @@ class NewExpr(Node):
         self.args = [] if args is None else args
 
     def children(self):
-        return [self.identifier, self.args]
+        return [self.identifier] + self.args
 
 class FunctionCall(Node):
     def __init__(self, identifier, args=None):
